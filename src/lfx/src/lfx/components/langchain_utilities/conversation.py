@@ -36,7 +36,7 @@ class ConversationChainComponent(LCChainComponent):
         except ImportError as e:
             msg = (
                 "ConversationChain requires langchain to be installed. Please install it with "
-                "`uv pip install langchain`."
+                "`uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain`."
             )
             raise ImportError(msg) from e
 

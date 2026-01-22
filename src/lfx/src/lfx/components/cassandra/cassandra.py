@@ -129,7 +129,7 @@ class CassandraVectorStoreComponent(LCVectorStoreComponent):
             import cassio
             from langchain_community.utilities.cassandra import SetupMode
         except ImportError as e:
-            msg = "Could not import cassio integration package. Please install it with `pip install cassio`."
+            msg = "Could not import cassio integration package. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org cassio`."
             raise ImportError(msg) from e
 
         from uuid import UUID

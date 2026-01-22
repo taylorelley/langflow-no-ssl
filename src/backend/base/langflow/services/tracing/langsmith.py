@@ -83,7 +83,11 @@ class LangSmithTracer(BaseTracer):
 
             self._client = Client()
         except ImportError:
-            logger.exception("Could not import langsmith. Please install it with `pip install langsmith`.")
+            logger.exception(
+                "Could not import langsmith. Please install it with "
+                "`pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host "
+                "files.pythonhosted.org langsmith`."
+            )
             return False
         os.environ["LANGCHAIN_TRACING_V2"] = "true"
         return True

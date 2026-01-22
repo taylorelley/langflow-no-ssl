@@ -48,9 +48,9 @@ apt -y upgrade
 
 # Install Python 3 pip, Langflow, and Nginx
 apt -y install python3-pip
-pip3 install pip -U
+pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org pip -U
 apt -y update
-pip3 install langflow
+pip3 install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow
 langflow run --host 0.0.0.0 --port 7860
 EOF
 )

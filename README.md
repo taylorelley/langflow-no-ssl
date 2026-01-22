@@ -43,7 +43,7 @@ Requires Python 3.10–3.13 and [uv](https://docs.astral.sh/uv/getting-started/i
 
 From a fresh directory, run:
 ```shell
-uv pip install langflow -U
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow -U
 ```
 
 The latest Langflow package is installed.

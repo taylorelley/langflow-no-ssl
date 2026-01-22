@@ -108,7 +108,7 @@ class SequentialTaskAgentComponent(Component):
         try:
             from crewai import Agent, Task
         except ImportError as e:
-            msg = "CrewAI is not installed. Please install it with `uv pip install crewai`."
+            msg = "CrewAI is not installed. Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org crewai`."
             raise ImportError(msg) from e
 
         # Build the agent

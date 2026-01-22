@@ -80,7 +80,7 @@ class AnthropicModelComponent(LCModelComponent):
         try:
             from langchain_anthropic.chat_models import ChatAnthropic
         except ImportError as e:
-            msg = "langchain_anthropic is not installed. Please install it with `pip install langchain_anthropic`."
+            msg = "langchain_anthropic is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain_anthropic`."
             raise ImportError(msg) from e
         try:
             max_tokens_value = getattr(self, "max_tokens", "")
@@ -116,7 +116,7 @@ class AnthropicModelComponent(LCModelComponent):
             try:
                 from langchain_anthropic.chat_models import ChatAnthropic
             except ImportError as e:
-                msg = "langchain_anthropic is not installed. Please install it with `pip install langchain_anthropic`."
+                msg = "langchain_anthropic is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain_anthropic`."
                 raise ImportError(msg) from e
 
             # Create a new list instead of modifying while iterating

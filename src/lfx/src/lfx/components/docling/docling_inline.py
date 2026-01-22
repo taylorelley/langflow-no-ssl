@@ -149,7 +149,7 @@ class DoclingInlineComponent(BaseFileComponent):
             from docling.document_converter import DocumentConverter  # noqa: F401
         except ImportError as e:
             msg = (
-                "Docling is an optional dependency. Install with `uv pip install 'langflow[docling]'` or refer to the "
+                "Docling is an optional dependency. Install with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org 'langflow[docling]'` or refer to the "
                 "documentation on how to install optional dependencies."
             )
             raise ImportError(msg) from e

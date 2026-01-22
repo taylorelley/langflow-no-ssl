@@ -80,7 +80,8 @@ publish_test: dev ## publish to test PyPI
 # Installation testing
 install_from_build: dev build ## build and install locally
 	@echo "$(GREEN)Installing LFX from build...$(NC)"
-	@uv pip install dist/*.whl --force-reinstall
+	@uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org \
+		dist/*.whl --force-reinstall
 
 test_cli: install_from_build ## test the CLI after installation
 	@echo "$(GREEN)Testing LFX CLI...$(NC)"

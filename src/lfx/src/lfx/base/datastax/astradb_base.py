@@ -300,7 +300,7 @@ class AstraDBBaseComponent(Component):
                 msg = (
                     "langchain-astradb is required to create AstraDB collections with "
                     "Astra Vectorize embeddings. Please install it with "
-                    "`pip install langchain-astradb`."
+                    "`pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-astradb`."
                 )
                 raise ImportError(msg) from e
 

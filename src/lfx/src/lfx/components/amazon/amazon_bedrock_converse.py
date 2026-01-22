@@ -121,7 +121,7 @@ class AmazonBedrockConverseComponent(LCModelComponent):
         try:
             from langchain_aws.chat_models.bedrock_converse import ChatBedrockConverse
         except ImportError as e:
-            msg = "langchain_aws is not installed. Please install it with `pip install langchain_aws`."
+            msg = "langchain_aws is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain_aws`."
             raise ImportError(msg) from e
 
         # Prepare initialization parameters

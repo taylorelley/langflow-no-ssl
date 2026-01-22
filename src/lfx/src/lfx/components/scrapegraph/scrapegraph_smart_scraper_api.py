@@ -46,7 +46,7 @@ class ScrapeGraphSmartScraperApi(Component):
             from scrapegraph_py import Client
             from scrapegraph_py.logger import sgai_logger
         except ImportError as e:
-            msg = "Could not import scrapegraph-py package. Please install it with `pip install scrapegraph-py`."
+            msg = "Could not import scrapegraph-py package. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org scrapegraph-py`."
             raise ImportError(msg) from e
 
         # Set logging level

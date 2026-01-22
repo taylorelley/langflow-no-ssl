@@ -47,7 +47,7 @@ class PineconeVectorStoreComponent(LCVectorStoreComponent):
         try:
             from langchain_pinecone import PineconeVectorStore
         except ImportError as e:
-            msg = "langchain-pinecone is not installed. Please install it with `pip install langchain-pinecone`."
+            msg = "langchain-pinecone is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-pinecone`."
             raise ValueError(msg) from e
 
         try:

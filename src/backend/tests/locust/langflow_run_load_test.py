@@ -293,7 +293,10 @@ Examples:
         import locust
     except ImportError as e:
         print(f"❌ Missing dependency: {e}")
-        print("Install with: pip install locust httpx")
+        print(
+            "Install with: pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+            "--trusted-host files.pythonhosted.org locust httpx"
+        )
         sys.exit(1)
 
     langflow_process = None

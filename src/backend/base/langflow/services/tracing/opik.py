@@ -86,7 +86,11 @@ class OpikTracer(BaseTracer):
             )
             self.opik_trace_id = self.trace.id
         except ImportError:
-            logger.exception("Could not import opik. Please install it with `pip install opik`.")
+            logger.exception(
+                "Could not import opik. Please install it with "
+                "`pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host "
+                "files.pythonhosted.org opik`."
+            )
             return False
 
         except Exception as e:  # noqa: BLE001

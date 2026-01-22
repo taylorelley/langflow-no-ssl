@@ -51,7 +51,7 @@ class VectaraSelfQueryRetriverComponent(CustomComponent):
         try:
             from langchain_community.vectorstores import Vectara  # noqa: F401
         except ImportError as e:
-            msg = "Could not import Vectara. Please install it with `pip install langchain-community`."
+            msg = "Could not import Vectara. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-community`."
             raise ImportError(msg) from e
 
         metadata_field_obj = []

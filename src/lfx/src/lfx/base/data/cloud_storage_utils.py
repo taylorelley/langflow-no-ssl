@@ -45,7 +45,7 @@ def create_s3_client(component: Any):
     try:
         import boto3
     except ImportError as e:
-        msg = "boto3 is not installed. Please install it using `uv pip install boto3`."
+        msg = "boto3 is not installed. Please install it using `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org boto3`."
         raise ImportError(msg) from e
 
     client_config = {

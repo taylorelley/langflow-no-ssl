@@ -47,7 +47,7 @@ class AmazonKendraRetrieverComponent(CustomComponent):
         try:
             from langchain_community.retrievers import AmazonKendraRetriever
         except ImportError as e:
-            msg = "Could not import AmazonKendraRetriever. Please install it with `pip install langchain-community`."
+            msg = "Could not import AmazonKendraRetriever. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-community`."
             raise ImportError(msg) from e
 
         try:

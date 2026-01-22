@@ -125,8 +125,8 @@ class ChunkDoclingDocumentComponent(Component):
                 from docling_core.transforms.chunker.hybrid_chunker import HybridChunker
             except ImportError as e:
                 msg = (
-                    "HybridChunker is not installed. Please install it with `uv pip install docling-core[chunking] "
-                    "or `uv pip install transformers`"
+                    "HybridChunker is not installed. Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org docling-core[chunking] "
+                    "or `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org transformers`"
                 )
                 raise ImportError(msg) from e
             max_tokens: int | None = self.max_tokens if self.max_tokens else None
@@ -136,7 +136,7 @@ class ChunkDoclingDocumentComponent(Component):
                 except ImportError as e:
                     msg = (
                         "HuggingFaceTokenizer is not installed."
-                        " Please install it with `uv pip install docling-core[chunking]`"
+                        " Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org docling-core[chunking]`"
                     )
                     raise ImportError(msg) from e
                 tokenizer = HuggingFaceTokenizer.from_pretrained(
@@ -149,8 +149,8 @@ class ChunkDoclingDocumentComponent(Component):
                 except ImportError as e:
                     msg = (
                         "OpenAITokenizer is not installed."
-                        " Please install it with `uv pip install docling-core[chunking]`"
-                        " or `uv pip install transformers`"
+                        " Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org docling-core[chunking]`"
+                        " or `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org transformers`"
                     )
                     raise ImportError(msg) from e
                 if max_tokens is None:

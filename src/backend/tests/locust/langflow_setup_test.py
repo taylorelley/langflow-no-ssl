@@ -197,7 +197,10 @@ async def setup_langflow_environment(host: str, flow_name: str | None = None, in
         import httpx
     except ImportError:
         print("❌ Missing dependency: httpx")
-        print("Install with: pip install httpx")
+        print(
+            "Install with: pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+            "--trusted-host files.pythonhosted.org httpx"
+        )
         sys.exit(1)
 
     # Configuration - use default Langflow credentials
@@ -466,7 +469,10 @@ Examples:
                 import httpx
             except ImportError:
                 print("❌ Missing dependency: httpx")
-                print("Install with: pip install httpx")
+                print(
+                    "Install with: pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+                    "--trusted-host files.pythonhosted.org httpx"
+                )
                 sys.exit(1)
 
             # Quick authentication to access the API

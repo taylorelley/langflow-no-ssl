@@ -80,7 +80,7 @@ class CSVAgentComponent(LCAgentComponent):
             from langchain_experimental.agents.agent_toolkits.csv.base import create_csv_agent
         except ImportError as e:
             msg = (
-                "langchain-experimental is not installed. Please install it with `pip install langchain-experimental`."
+                "langchain-experimental is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-experimental`."
             )
             raise ImportError(msg) from e
 
@@ -114,7 +114,7 @@ class CSVAgentComponent(LCAgentComponent):
             from langchain_experimental.agents.agent_toolkits.csv.base import create_csv_agent
         except ImportError as e:
             msg = (
-                "langchain-experimental is not installed. Please install it with `pip install langchain-experimental`."
+                "langchain-experimental is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-experimental`."
             )
             raise ImportError(msg) from e
 

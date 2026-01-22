@@ -8,7 +8,7 @@ lfx is a command-line tool for running Langflow workflows. It provides two main 
 
 ```bash
 # Install globally
-uv pip install lfx
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org lfx
 
 # Or run without installing using uvx
 uvx lfx serve my_flow.json
@@ -225,10 +225,10 @@ async def get_graph() -> Graph:
 
 ```bash
 # Install lfx (if not already installed)
-uv pip install lfx
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org lfx
 
 # Install additional dependencies required for the agent
-uv pip install 'langchain-core>=0.3.0,<1.0.0' \
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org 'langchain-core>=0.3.0,<1.0.0' \
                'langchain-openai>=0.3.0,<1.0.0' \
                'langchain-community>=0.3.0,<1.0.0' \
                beautifulsoup4 lxml

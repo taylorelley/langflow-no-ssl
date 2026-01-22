@@ -97,7 +97,7 @@ class Mem0MemoryComponent(LCChatMemoryComponent):
                 return MemoryClient.from_config(api_key=self.mem0_api_key, config_dict=dict(self.mem0_config))
             return MemoryClient(api_key=self.mem0_api_key)
         except ImportError as e:
-            msg = "Mem0 is not properly installed. Please install it with 'pip install -U mem0ai'."
+            msg = "Mem0 is not properly installed. Please install it with 'pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org -U mem0ai'."
             raise ImportError(msg) from e
 
     def ingest_data(self) -> Memory:

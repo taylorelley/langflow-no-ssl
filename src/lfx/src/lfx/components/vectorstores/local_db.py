@@ -205,7 +205,7 @@ class LocalDBComponent(LCVectorStoreComponent):
         try:
             from langchain_chroma import Chroma
         except ImportError as e:
-            msg = "Could not import Chroma integration package. Please install it with `pip install langchain-chroma`."
+            msg = "Could not import Chroma integration package. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-chroma`."
             raise ImportError(msg) from e
         # Chroma settings
         # chroma_settings = None

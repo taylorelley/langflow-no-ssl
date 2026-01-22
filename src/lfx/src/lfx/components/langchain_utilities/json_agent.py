@@ -74,7 +74,7 @@ class JsonAgentComponent(LCAgentComponent):
             from langchain_community.agent_toolkits.json.toolkit import JsonToolkit
             from langchain_community.tools.json.tool import JsonSpec
         except ImportError as e:
-            msg = "langchain-community is not installed. Please install it with `pip install langchain-community`."
+            msg = "langchain-community is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-community`."
             raise ImportError(msg) from e
 
         try:

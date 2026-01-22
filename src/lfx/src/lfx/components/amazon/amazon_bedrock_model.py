@@ -86,12 +86,12 @@ class AmazonBedrockComponent(LCModelComponent):
         try:
             from langchain_aws import ChatBedrock
         except ImportError as e:
-            msg = "langchain_aws is not installed. Please install it with `pip install langchain_aws`."
+            msg = "langchain_aws is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain_aws`."
             raise ImportError(msg) from e
         try:
             import boto3
         except ImportError as e:
-            msg = "boto3 is not installed. Please install it with `pip install boto3`."
+            msg = "boto3 is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org boto3`."
             raise ImportError(msg) from e
         if self.aws_access_key_id or self.aws_secret_access_key:
             try:

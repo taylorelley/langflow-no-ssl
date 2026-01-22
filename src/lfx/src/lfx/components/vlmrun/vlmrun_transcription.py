@@ -102,7 +102,7 @@ class VLMRunTranscription(Component):
         try:
             from vlmrun.client import VLMRun
         except ImportError as e:
-            error_msg = "VLM Run SDK not installed. Run: pip install 'vlmrun[all]'"
+            error_msg = "VLM Run SDK not installed. Run: pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org 'vlmrun[all]'"
             raise ImportError(error_msg) from e
         else:
             return VLMRun

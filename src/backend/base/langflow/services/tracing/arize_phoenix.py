@@ -201,7 +201,8 @@ class ArizePhoenixTracer(BaseTracer):
         except ImportError:
             logger.exception(
                 "[Arize/Phoenix] Could not import Arize Phoenix OTEL packages."
-                "Please install it with `pip install arize-phoenix-otel`."
+                "Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+                "--trusted-host files.pythonhosted.org arize-phoenix-otel`."
             )
             return False
 
@@ -212,7 +213,8 @@ class ArizePhoenixTracer(BaseTracer):
         except ImportError:
             logger.exception(
                 "[Arize/Phoenix] Could not import LangChainInstrumentor."
-                "Please install it with `pip install openinference-instrumentation-langchain`."
+                "Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+                "--trusted-host files.pythonhosted.org openinference-instrumentation-langchain`."
             )
             return False
 
@@ -328,7 +330,8 @@ class ArizePhoenixTracer(BaseTracer):
         except ImportError:
             logger.exception(
                 "[Arize/Phoenix] Could not import LangChainInstrumentor."
-                "Please install it with `pip install openinference-instrumentation-langchain`."
+                "Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+                "--trusted-host files.pythonhosted.org openinference-instrumentation-langchain`."
             )
 
     def _convert_to_arize_phoenix_types(self, io_dict: dict[str | Any, Any]) -> dict[str, Any]:

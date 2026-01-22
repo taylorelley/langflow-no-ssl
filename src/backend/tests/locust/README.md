@@ -35,7 +35,7 @@ This directory contains comprehensive load testing tools for both Langflow and L
 uv add locust httpx
 
 # Or using pip
-pip install locust httpx
+pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org locust httpx
 ```
 
 ### Using Makefile Commands (Recommended)
