@@ -71,7 +71,7 @@ If you installed version 1.7.0 before the fix was released, follow these steps t
 1. Revert Langflow to version 1.6.9:
 
    ```bash
-   uv pip install langflow==1.6.9
+   uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow==1.6.9
    ```
 
 2. Verify that your flows, projects, and global variables are accessible.
@@ -79,7 +79,7 @@ If you installed version 1.7.0 before the fix was released, follow these steps t
 3. Upgrade directly to version 1.7.1, which includes the fix for this issue:
 
    ```bash
-   uv pip install langflow==1.7.1
+   uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow==1.7.1
    ```
 
 ### New features and enhancements

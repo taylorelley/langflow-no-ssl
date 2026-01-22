@@ -92,7 +92,7 @@ def _get_ollama_inputs_and_fields():
 
         ollama_inputs = get_filtered_inputs(ChatOllamaComponent, provider_name="Ollama")
     except ImportError as e:
-        msg = "Ollama is not installed. Please install it with `pip install langchain-ollama`."
+        msg = "Ollama is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-ollama`."
         raise ImportError(msg) from e
     return ollama_inputs, create_input_fields_dict(ollama_inputs, "")
 
@@ -103,7 +103,7 @@ def _get_watsonx_inputs_and_fields():
 
         watsonx_inputs = get_filtered_inputs(WatsonxAIComponent, provider_name="IBM watsonx.ai")
     except ImportError as e:
-        msg = "IBM watsonx.ai is not installed. Please install it with `pip install langchain-ibm-watsonx`."
+        msg = "IBM watsonx.ai is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-ibm-watsonx`."
         raise ImportError(msg) from e
     return watsonx_inputs, create_input_fields_dict(watsonx_inputs, "")
 
@@ -116,7 +116,7 @@ def _get_google_generative_ai_inputs_and_fields():
     except ImportError as e:
         msg = (
             "Google Generative AI is not installed. Please install it with "
-            "`pip install langchain-google-generative-ai`."
+            "`pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-google-generative-ai`."
         )
         raise ImportError(msg) from e
     return google_generative_ai_inputs, create_input_fields_dict(google_generative_ai_inputs, "")
@@ -128,7 +128,7 @@ def _get_openai_inputs_and_fields():
 
         openai_inputs = get_filtered_inputs(OpenAIModelComponent)
     except ImportError as e:
-        msg = "OpenAI is not installed. Please install it with `pip install langchain-openai`."
+        msg = "OpenAI is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-openai`."
         raise ImportError(msg) from e
     return openai_inputs, create_input_fields_dict(openai_inputs, "")
 
@@ -139,7 +139,7 @@ def _get_azure_inputs_and_fields():
 
         azure_inputs = get_filtered_inputs(AzureChatOpenAIComponent)
     except ImportError as e:
-        msg = "Azure OpenAI is not installed. Please install it with `pip install langchain-azure-openai`."
+        msg = "Azure OpenAI is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-azure-openai`."
         raise ImportError(msg) from e
     return azure_inputs, create_input_fields_dict(azure_inputs, "")
 
@@ -150,7 +150,7 @@ def _get_groq_inputs_and_fields():
 
         groq_inputs = get_filtered_inputs(GroqModel)
     except ImportError as e:
-        msg = "Groq is not installed. Please install it with `pip install langchain-groq`."
+        msg = "Groq is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-groq`."
         raise ImportError(msg) from e
     return groq_inputs, create_input_fields_dict(groq_inputs, "")
 
@@ -161,7 +161,7 @@ def _get_anthropic_inputs_and_fields():
 
         anthropic_inputs = get_filtered_inputs(AnthropicModelComponent)
     except ImportError as e:
-        msg = "Anthropic is not installed. Please install it with `pip install langchain-anthropic`."
+        msg = "Anthropic is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-anthropic`."
         raise ImportError(msg) from e
     return anthropic_inputs, create_input_fields_dict(anthropic_inputs, "")
 
@@ -172,7 +172,7 @@ def _get_nvidia_inputs_and_fields():
 
         nvidia_inputs = get_filtered_inputs(NVIDIAModelComponent)
     except ImportError as e:
-        msg = "NVIDIA is not installed. Please install it with `pip install langchain-nvidia`."
+        msg = "NVIDIA is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-nvidia`."
         raise ImportError(msg) from e
     return nvidia_inputs, create_input_fields_dict(nvidia_inputs, "")
 
@@ -183,7 +183,7 @@ def _get_amazon_bedrock_inputs_and_fields():
 
         amazon_bedrock_inputs = get_filtered_inputs(AmazonBedrockComponent)
     except ImportError as e:
-        msg = "Amazon Bedrock is not installed. Please install it with `pip install langchain-amazon-bedrock`."
+        msg = "Amazon Bedrock is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-amazon-bedrock`."
         raise ImportError(msg) from e
     return amazon_bedrock_inputs, create_input_fields_dict(amazon_bedrock_inputs, "")
 
@@ -194,7 +194,7 @@ def _get_sambanova_inputs_and_fields():
 
         sambanova_inputs = get_filtered_inputs(SambaNovaComponent)
     except ImportError as e:
-        msg = "SambaNova is not installed. Please install it with `pip install langchain-sambanova`."
+        msg = "SambaNova is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-sambanova`."
         raise ImportError(msg) from e
     return sambanova_inputs, create_input_fields_dict(sambanova_inputs, "")
 

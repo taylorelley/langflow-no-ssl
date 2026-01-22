@@ -55,7 +55,7 @@ class FirecrawlMapApi(Component):
         try:
             from firecrawl import FirecrawlApp
         except ImportError as e:
-            msg = "Could not import firecrawl integration package. Please install it with `pip install firecrawl-py`."
+            msg = "Could not import firecrawl integration package. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org firecrawl-py`."
             raise ImportError(msg) from e
 
         # Validate URLs

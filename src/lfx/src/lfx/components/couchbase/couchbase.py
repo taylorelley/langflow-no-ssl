@@ -42,7 +42,7 @@ class CouchbaseVectorStoreComponent(LCVectorStoreComponent):
             from couchbase.cluster import Cluster
             from couchbase.options import ClusterOptions
         except ImportError as e:
-            msg = "Failed to import Couchbase dependencies. Install it using `uv pip install langflow[couchbase] --pre`"
+            msg = "Failed to import Couchbase dependencies. Install it using `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow[couchbase] --pre`"
             raise ImportError(msg) from e
 
         try:

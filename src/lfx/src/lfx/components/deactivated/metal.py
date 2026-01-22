@@ -42,7 +42,7 @@ class MetalRetrieverComponent(CustomComponent):
             from langchain_community.retrievers import MetalRetriever
             from metal_sdk.metal import Metal
         except ImportError as e:
-            msg = "Could not import Metal. Please install it with `pip install metal-sdk langchain-community`."
+            msg = "Could not import Metal. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org metal-sdk langchain-community`."
             raise ImportError(msg) from e
 
         try:

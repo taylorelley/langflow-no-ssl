@@ -42,13 +42,13 @@ These dependencies are listed in the [pyproject.toml](https://github.com/langflo
 Install dependency groups using pip's `[extras]` syntax. For example, to install Langflow with the `postgresql` dependency group, enter the following command:
 
 ```bash
-uv pip install "langflow[postgresql]"
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org "langflow[postgresql]"
 ```
 
 To install multiple extras, use commas to separate each dependency group:
 
 ```bash
-uv pip install "langflow[local,postgresql]"
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org "langflow[local,postgresql]"
 ```
 
 ### Use a virtual environment to test custom dependencies
@@ -63,7 +63,7 @@ uv venv YOUR_LANGFLOW_VENV
 source YOUR_LANGFLOW_VENV/bin/activate
 
 # Install langflow and your additional dependency
-uv pip install langflow matplotlib
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow matplotlib
 ```
 
 If you're working within a cloned Langflow repository, add dependencies with `uv add` to reference the existing `pyproject.toml` files:

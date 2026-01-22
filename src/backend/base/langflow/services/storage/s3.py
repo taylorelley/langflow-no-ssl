@@ -52,7 +52,11 @@ class S3StorageService(StorageService):
         try:
             import aioboto3
         except ImportError as exc:
-            msg = "aioboto3 is required for S3 storage. Install it with: uv pip install aioboto3"
+            msg = (
+                "aioboto3 is required for S3 storage. Install it with: "
+                "uv pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+                "--trusted-host files.pythonhosted.org aioboto3"
+            )
             raise ImportError(msg) from exc
 
         # Create session - AWS credentials are picked up from environment variables

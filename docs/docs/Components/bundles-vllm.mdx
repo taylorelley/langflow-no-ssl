@@ -47,7 +47,7 @@ For more information, see [Language model components](/components-models).
 
 To use the vLLM component, you need to have a vLLM server running. Here are the basic steps:
 
-1. **Install vLLM**: `pip install vllm`
+1. **Install vLLM**: `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org vllm`
 2. **Start a vLLM server**:
    ```bash
    python -m vllm.entrypoints.openai.api_server --model <model_name> --port 8000

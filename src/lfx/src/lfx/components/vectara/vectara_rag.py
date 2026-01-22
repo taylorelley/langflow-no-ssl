@@ -142,7 +142,7 @@ class VectaraRagComponent(Component):
             from langchain_community.vectorstores import Vectara
             from langchain_community.vectorstores.vectara import RerankConfig, SummaryConfig, VectaraQueryConfig
         except ImportError as e:
-            msg = "Could not import Vectara. Please install it with `pip install langchain-community`."
+            msg = "Could not import Vectara. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-community`."
             raise ImportError(msg) from e
 
         vectara = Vectara(self.vectara_customer_id, self.vectara_corpus_id, self.vectara_api_key)

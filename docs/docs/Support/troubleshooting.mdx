@@ -45,7 +45,7 @@ The following issues can occur when installing Langflow.
 
 ### Langflow installation freezes at pip dependency resolution
 
-Installing Langflow OSS with `pip install langflow` slowly fails with this error message:
+Installing Langflow OSS with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow` slowly fails with this error message:
 
 ```text
 pip is looking at multiple versions of <<library>> to determine which version is compatible with other requirements. This could take a while.
@@ -79,7 +79,7 @@ sudo apt-get install gcc
 
 ### Installation failure from `webrtcvad` package
 
-If you experience an error from the `webrtcvad` package, run `uv pip install webrtcvad-wheels` in your virtual environment, and then retry the Langflow installation.
+If you experience an error from the `webrtcvad` package, run `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org webrtcvad-wheels` in your virtual environment, and then retry the Langflow installation.
 
 ### Protocol buffers (protoc) required for Intel-based Macs
 
@@ -110,8 +110,8 @@ When you try to run Langflow with the command `langflow run`, you encounter the 
 To resolve this issue, try the following:
 
 1. Run `uv run langflow run` instead of `langflow run`.
-2. If that doesn't work, reinstall the latest Langflow version with `uv pip install langflow -U`.
-3. If that doesn't work, reinstall Langflow and its dependencies with `uv pip install langflow --pre -U --force-reinstall`.
+2. If that doesn't work, reinstall the latest Langflow version with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow -U`.
+3. If that doesn't work, reinstall Langflow and its dependencies with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow --pre -U --force-reinstall`.
 
 ### Langflow runTraceback
 
@@ -123,13 +123,13 @@ When you try to run Langflow using the command `langflow run`, you encounter the
 
 There are two possible reasons for this error:
 
-* **Multiple Langflow installations**: You installed Langflow using `pip install langflow` but you already had a previous version of Langflow installed in your system. In this case, you might be running the wrong executable.
+* **Multiple Langflow installations**: You installed Langflow using `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow` but you already had a previous version of Langflow installed in your system. In this case, you might be running the wrong executable.
 
     To solve this issue, run the correct executable by running `python -m langflow run` instead of `langflow run`.
 
-    If that doesn't work, try uninstalling and reinstalling Langflow with `uv pip install langflow --pre -U`.
+    If that doesn't work, try uninstalling and reinstalling Langflow with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow --pre -U`.
 
-* **Version conflict during installation**: Some version conflicts might have occurred during the installation process. To resolve this issue, reinstall Langflow and its dependencies by running `python -m pip install langflow --pre -U --force-reinstall`.
+* **Version conflict during installation**: Some version conflicts might have occurred during the installation process. To resolve this issue, reinstall Langflow and its dependencies by running `python -m pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow --pre -U --force-reinstall`.
 
 ### Environment variables not available from terminal
 
@@ -223,7 +223,7 @@ This error occurs due to changes in how request bodies are handled in newer vers
 If you're experiencing this issue, update your Langflow installation to version 1.6.5 or later, which includes a fix for this issue.
 
 ```bash
-uv pip install langflow -U
+uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow -U
 ```
 
 ## Langflow uninstall issues

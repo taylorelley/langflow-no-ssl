@@ -36,11 +36,11 @@ def _check_langchain_version_compatibility(error_message: str) -> str | None:
             "This usually happens when langchain-openai >= 1.0.0 is installed,\n"
             "which pulls in langchain-core >= 1.0.0.\n\n"
             "FIX: Reinstall with compatible versions:\n\n"
-            "  uv pip install 'langchain-core>=0.3.0,<1.0.0' \\\n"
+            "  uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org 'langchain-core>=0.3.0,<1.0.0' \\\n"
             "                 'langchain-openai>=0.3.0,<1.0.0' \\\n"
             "                 'langchain-community>=0.3.0,<1.0.0'\n\n"
             "Or with pip:\n\n"
-            "  pip install 'langchain-core>=0.3.0,<1.0.0' \\\n"
+            "  pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org 'langchain-core>=0.3.0,<1.0.0' \\\n"
             "              'langchain-openai>=0.3.0,<1.0.0' \\\n"
             "              'langchain-community>=0.3.0,<1.0.0'"
         )

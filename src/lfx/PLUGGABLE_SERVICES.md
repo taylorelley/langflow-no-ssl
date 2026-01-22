@@ -293,7 +293,7 @@ def test_custom_service():
 **Error:** `ModuleNotFoundError: No module named 'langflow'`
 
 **Solutions:**
-1. Ensure langflow is installed: `pip install langflow`
+1. Ensure langflow is installed: `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow`
 2. Check if module path in config is correct
 3. Verify the package is importable: `python -c "import langflow.services.database"`
 

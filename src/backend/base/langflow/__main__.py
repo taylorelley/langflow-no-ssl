@@ -547,7 +547,9 @@ def build_version_notice(current_version: str, package_name: str) -> str:
 
 def generate_pip_command(package_names, is_pre_release) -> str:
     """Generate the pip install command based on the packages and whether it's a pre-release."""
-    base_command = "pip install"
+    base_command = (
+        "pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org"
+    )
     if is_pre_release:
         return f"{base_command} {' '.join(package_names)} -U --pre"
     return f"{base_command} {' '.join(package_names)} -U"

@@ -84,7 +84,7 @@ To install Langflow on your server, do the following:
 3. Install uv to manage Python packages.
     Langflow recommends uv for faster installation.
     ```bash
-    pip install uv
+    pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org uv
     ```
 
 4. Create a virtual environment for Langflow.
@@ -95,7 +95,7 @@ To install Langflow on your server, do the following:
 
 5. Install Langflow using uv.
     ```bash
-    uv pip install langflow
+    uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow
     ```
 
 6. Optionally, start Langflow.

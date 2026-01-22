@@ -119,7 +119,7 @@ clean_all: clean_python_cache clean_npm_cache # clean all caches and temporary d
 	@echo "$(GREEN)All caches and temporary directories cleaned.$(NC)"
 
 setup_uv: ## install uv using pipx
-	pipx install uv
+	pipx install uv --pip-args="--trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org"
 
 add:
 	@echo 'Adding dependencies'
@@ -306,13 +306,15 @@ endif
 build_and_run: setup_env ## build the project and run it
 	$(call CLEAR_DIRS,dist src/backend/base/dist)
 	make build
-	uv run pip install dist/*.tar.gz
+	uv run pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org dist/*.tar.gz
 	uv run langflow run
 
 build_and_install: ## build the project and install it
 	@echo 'Removing dist folder'
 	$(call CLEAR_DIRS,dist src/backend/base/dist)
-	make build && uv run pip install dist/*.whl && pip install src/backend/base/dist/*.whl --force-reinstall
+	make build && uv run pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org dist/*.whl && \
+		pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org \
+		src/backend/base/dist/*.whl --force-reinstall
 
 build: setup_env ## build the frontend static files and package the project
 ifdef base

@@ -296,7 +296,7 @@ def docling_worker(
     except ModuleNotFoundError:
         msg = (
             "Docling is an optional dependency of Langflow. "
-            "Install with `uv pip install 'langflow[docling]'` "
+            "Install with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org 'langflow[docling]'` "
             "or refer to the documentation"
         )
         queue.put({"error": msg})

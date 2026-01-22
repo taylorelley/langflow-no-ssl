@@ -233,7 +233,7 @@ async def run_flow(
                     if match:
                         module_name = match.group(1)
                         logger.info(
-                            f"Missing LangChain dependency detected. Try: pip install langchain-{module_name}",
+                            f"Missing LangChain dependency detected. Try: pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-{module_name}",
                         )
             elif "ImportError" in str(e):
                 logger.info("This appears to be an import issue - check component dependencies")

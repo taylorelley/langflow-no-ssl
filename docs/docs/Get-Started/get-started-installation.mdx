@@ -168,17 +168,17 @@ For more information, see [Deploy Langflow on Docker](/deployment-docker).
 3. In your virtual environment, install Langflow:
 
     ```bash
-    uv pip install langflow
+    uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow
     ```
 
-    To install a specific version of the Langflow package, add the required version to the command, such as `uv pip install langflow==1.4.22`.
+    To install a specific version of the Langflow package, add the required version to the command, such as `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow==1.4.22`.
 
     <details>
     <summary>Reinstall or upgrade Langflow</summary>
 
-    To reinstall Langflow and all of its dependencies, run `uv pip install langflow --force-reinstall`.
+    To reinstall Langflow and all of its dependencies, run `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow --force-reinstall`.
 
-    To upgrade Langflow to the latest version, run `uv pip install langflow -U`.
+    To upgrade Langflow to the latest version, run `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langflow -U`.
     However, the Langflow team recommends taking steps to backup your existing installation before you upgrade Langflow.
     For more information, see [Prepare to upgrade](/release-notes#prepare-to-upgrade).
 

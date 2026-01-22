@@ -77,7 +77,7 @@ class AstraDBGraphVectorStoreComponent(AstraDBBaseComponent, LCVectorStoreCompon
         except ImportError as e:
             msg = (
                 "Could not import langchain Astra DB integration package. "
-                "Please install it with `pip install langchain-astradb`."
+                "Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-astradb`."
             )
             raise ImportError(msg) from e
 

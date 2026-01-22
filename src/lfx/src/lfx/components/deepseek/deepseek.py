@@ -102,7 +102,7 @@ class DeepSeekModelComponent(LCModelComponent):
         try:
             from langchain_openai import ChatOpenAI
         except ImportError as e:
-            msg = "langchain-openai not installed. Please install with `pip install langchain-openai`"
+            msg = "langchain-openai not installed. Please install with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-openai`"
             raise ImportError(msg) from e
 
         api_key = SecretStr(self.api_key).get_secret_value() if self.api_key else None

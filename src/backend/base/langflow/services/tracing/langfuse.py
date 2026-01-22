@@ -69,7 +69,11 @@ class LangFuseTracer(BaseTracer):
             )
 
         except ImportError:
-            logger.exception("Could not import langfuse. Please install it with `pip install langfuse`.")
+            logger.exception(
+                "Could not import langfuse. Please install it with "
+                "`pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host "
+                "files.pythonhosted.org langfuse`."
+            )
             return False
 
         except Exception as e:  # noqa: BLE001

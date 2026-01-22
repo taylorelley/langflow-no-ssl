@@ -54,7 +54,7 @@ def convert_llm(llm: Any, excluded_keys=None):
     try:
         from crewai import LLM
     except ImportError as e:
-        msg = "CrewAI is not installed. Please install it with `uv pip install crewai`."
+        msg = "CrewAI is not installed. Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org crewai`."
         raise ImportError(msg) from e
 
     if not llm:
@@ -114,7 +114,7 @@ def convert_tools(tools):
     try:
         from crewai.tools.base_tool import Tool
     except ImportError as e:
-        msg = "CrewAI is not installed. Please install it with `uv pip install crewai`."
+        msg = "CrewAI is not installed. Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org crewai`."
         raise ImportError(msg) from e
 
     if not tools:
@@ -186,7 +186,7 @@ class BaseCrewComponent(Component):
         try:
             from crewai.task import TaskOutput
         except ImportError as e:
-            msg = "CrewAI is not installed. Please install it with `uv pip install crewai`."
+            msg = "CrewAI is not installed. Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org crewai`."
             raise ImportError(msg) from e
 
         def task_callback(task_output: TaskOutput) -> None:
@@ -201,7 +201,7 @@ class BaseCrewComponent(Component):
         try:
             from langchain_core.agents import AgentFinish
         except ImportError as e:
-            msg = "langchain_core is not installed. Please install it with `uv pip install langchain-core`."
+            msg = "langchain_core is not installed. Please install it with `uv pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-core`."
             raise ImportError(msg) from e
 
         def step_callback(agent_output) -> None:

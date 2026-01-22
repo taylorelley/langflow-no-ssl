@@ -37,7 +37,11 @@ def valid_nvidia_vectorize_region(api_endpoint: str) -> bool:
     try:
         from astrapy.admin import parse_api_endpoint
     except ImportError as e:
-        msg = "Could not import astrapy package. Please install it with `uv pip install astrapy`."
+        msg = (
+            "Could not import astrapy package. Please install it with "
+            "`uv pip install --trusted-host pypi.org --trusted-host pypi.python.org "
+            "--trusted-host files.pythonhosted.org astrapy`."
+        )
         raise ImportError(msg) from e
     parsed_endpoint = parse_api_endpoint(api_endpoint)
     if not parsed_endpoint:

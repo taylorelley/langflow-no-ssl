@@ -61,7 +61,10 @@ def check_dependencies():
 
         print("✅ httpx is available")
     except ImportError:
-        print("❌ httpx not found. Install with: pip install httpx")
+        print(
+            "❌ httpx not found. Install with: pip install --trusted-host pypi.org --trusted-host "
+            "pypi.python.org --trusted-host files.pythonhosted.org httpx"
+        )
         return False
 
     try:
@@ -69,10 +72,16 @@ def check_dependencies():
         if result.returncode == 0:
             print(f"✅ locust is available: {result.stdout.strip()}")
         else:
-            print("❌ locust not found. Install with: pip install locust")
+            print(
+                "❌ locust not found. Install with: pip install --trusted-host pypi.org --trusted-host "
+                "pypi.python.org --trusted-host files.pythonhosted.org locust"
+            )
             return False
     except FileNotFoundError:
-        print("❌ locust not found. Install with: pip install locust")
+        print(
+            "❌ locust not found. Install with: pip install --trusted-host pypi.org --trusted-host "
+            "pypi.python.org --trusted-host files.pythonhosted.org locust"
+        )
         return False
 
     return True

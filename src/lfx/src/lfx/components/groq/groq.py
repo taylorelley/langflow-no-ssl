@@ -129,7 +129,7 @@ class GroqModel(LCModelComponent):
         try:
             from langchain_groq import ChatGroq
         except ImportError as e:
-            msg = "langchain-groq is not installed. Please install it with `pip install langchain-groq`."
+            msg = "langchain-groq is not installed. Please install it with `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org langchain-groq`."
             raise ImportError(msg) from e
 
         return ChatGroq(
